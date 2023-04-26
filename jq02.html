@@ -5,21 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sQuery 셀렉터</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+    $(function(){
+        $("#b1").on("click", pic1handler);
+        $("#b2").click(function(){
+            $(".c2").hide();
+        });
+        $("#b3").on("click",function(){
+            $("img").hide();
+        });
+        $("#b4").on("click",function(){
+            $("img").show();
+        });
+    });
+    function pic1handler() {
+        $("#pic1").hide();
+    }
+    </script>
 </head>
 <body>
     <h1>p.473 jquery 실습예제</h1>
     <div class="example">
         <div class="imgs">
-            <img src="https://picsum.photos/id/1/300" alt="picsum photos">
-            <img src="https://picsum.photos/id/10/300" alt="picsum photos">
-            <img src="https://picsum.photos/id/100/300" alt="picsum photos">
-            <img src="https://picsum.photos/id/1000/300" alt="picsum photos">
+            <img src="https://picsum.photos/id/1/300" id="pic1" class="c1" alt="picsum photos">
+            <img src="https://picsum.photos/id/10/300" id="pic2" class="c2" alt="picsum photos">
+            <img src="https://picsum.photos/id/100/300" id="pic3" class="c3" alt="picsum photos">
+            <img src="https://picsum.photos/id/1000/300" id="pic4" class="c4" alt="picsum photos">
         </div>
         <div class="btns">
-            <button>#pic1 숨기기</button>
-            <button>.c1 숨기기</button>
-            <button>모든 이미지 숨기기</button>
-            <button>모든 이미지 숨기기 취소</button>
+            <button id="b1">#pic1 숨기기</button>
+            <button id="b2">.c2 숨기기</button>
+            <button id="b3">모든 이미지 숨기기</button>
+            <button id="b4">모든 이미지 숨기기 취소</button>
     </div>
     </div>
 </body>
