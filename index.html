@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+    <style>
+        #displayArea {
+            width: 200px;
+            height: 200px;
+            border: 1px groove #333;
+            overflow: hidden;
+        }
+        #dispalyArea img {
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>자바스크립트 사용 방법</h1>
+    <!--1. 보통 </head> 앞에 작성하거나</body> 앞에 작성 -->
+    <div id="displayArea">
+        
+    </div>
+    <button type="button" id="displayBtn">표시</button>
+    <!--2-1. jQuery 공식 사이트 CDN: 개발용(문법 해석용 라이브러리) -->
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            //jQuery 시작 코드 [static(정적인 파일들 HTML, CSS, JS, IMAGE) 파일들 로드된 뒤 스크립트 실행]
+        });
+
+        // 긴버전 vs 짧은 버전
+
+        $(function(){
+            //jQuery 시작 코드 [static(정적인 파일들 HTML, CSS, JS, IMAGE) 파일들 로드된 뒤 스크립트 실행]
+        });
+    </script>
+
+    <script src="lib/3.6.4 jquery.min.js"></script>
+    <script src="script/selector.js"></script> <!--chapter5. section 03. 제이쿼리를 사용한 태그제어-->
+</body>
+</html>
